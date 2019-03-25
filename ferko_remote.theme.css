@@ -1,0 +1,70 @@
+//META{"name":"Ferko_Theme","description":"WJSN Square Theme with Ferko adjustment","author":"Ferko","version":"0.0.1"}*//{}
+/*****************************************************************************
+WJSN Square - WJSN Theme by Kakkela
+Edited ver. of WitcherCord by Jadeonking (https://github.com/jadeonking/WitcherCord)
+Uses SmartEmbeds from BeardDesign1
+Support: https://discord.is/kakkcord
+*****************************************************************************/
+@import url(https://cdn.jsdelivr.net/gh/Kakkela/wjsnTheme@latest/css/theme.css);
+
+
+/* Background image, use https.
+To adjust background darkness adjust 0.5s below, 1 is full black and 0 is full bright. You can also create gradient with them, first is left end of the window, second is middle part of the window (can be adjusted by editing the percentage, its portion of the window from left end) and third right end of the window
+*/
+[class*="appMount-"] {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) ), url('');
+    background-size: cover!important;
+}
+/* Friends icon, use https */
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="container-"] [class*="homeButton-"] [class*="homeLink-"] {
+    /* background-image: url(https://i.imgur.com/KwzaOdl.png)!important; */
+}
+/* If you want embed video controls change display:none to display:inherit */
+.embed [class*="embedVideoActionsInner-"] {
+	display: inherit;
+}
+
+
+
+/* Accent colors
+1 is for channel names and new message notifications on serverlist, muted channels use this color but darkened variant.
+2 is for category names.
+4 is for hovered channel background
+3 is for selected channel background
+*/
+:root {
+    --accentcolor1: #d4d2ff;
+    --accentcolor4: rgba(226, 81, 149, .6);
+    --accentcolor2: white;
+    --accentcolor3: rgba(255, 255, 255, .6);
+}
+/* Mention message background color */
+.theme-dark [class*="isMentioned-"], [class*="isMentionedCozy-"]:after {
+    background: rgba(226, 81, 149,.2)!important;
+}
+
+
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"]{
+	width: 150px;
+}
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="scrollerWrap-"] {
+	width: 170px;
+}
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="container-"], [class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="scroller-"]>div:nth-last-child(-n+3):not(.container-2td-dC) {
+	float:left;
+    margin-right: 14px;
+    margin-top: 4px;
+}
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="guildSeparator-"] {
+	width: 180px;
+    height: 35px;
+}
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="friendsOnline-"] {
+    width: 55px;
+    font-size: 8px;
+    margin-top: 50px;
+    padding-left: 44px;
+}
+[class*="layer-"]>[class*="flex-"]>[class*="wrapper-"] [class*="container-"] [class*="homeButton-"] {
+    margin-left: 47px;
+}
